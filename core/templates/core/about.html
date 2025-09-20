@@ -1,0 +1,272 @@
+{% extends 'core/base.html' %}
+
+{% block title %}About Us - FloPro | Automation Experts{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="min-height: 70vh;">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-8">
+                <div class="animate-on-scroll">
+                    <h1 class="display-3 text-gradient mb-4">Pioneering Automation Excellence</h1>
+                    <p class="lead opacity-75 mb-4">
+                        We're not just automating processes—we're revolutionizing how Jamaican businesses think about efficiency, innovation, and growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="glass-card p-4 animate-on-scroll">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-number">5+</div>
+                                <small class="opacity-75">Years Innovation</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-number">50+</div>
+                                <small class="opacity-75">Clients Transformed</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-number">100+</div>
+                                <small class="opacity-75">Processes Automated</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card text-center">
+                                <div class="stat-number">24/7</div>
+                                <small class="opacity-75">Expert Support</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="animate-on-scroll">
+                    <h2 class="display-5 text-gradient mb-4">Our Mission</h2>
+                    <p class="opacity-75 mb-4">
+                        FloPro is dedicated to transforming Jamaican businesses through intelligent automation. We believe that every organization, regardless of size, deserves access to cutting-edge technology that can streamline operations, reduce costs, and unlock new opportunities for growth.
+                    </p>
+                    <p class="opacity-75 mb-4">
+                        Located in the heart of Kingston, we combine deep local understanding with global best practices to deliver automation solutions that truly work in the Caribbean context.
+                    </p>
+                    <a href="{% url 'core:contact' %}" class="btn btn-primary">
+                        <i class="fas fa-handshake me-2"></i>Partner with Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center animate-on-scroll">
+                <h2 class="display-4 text-gradient mb-3">Our Core Values</h2>
+                <p class="lead opacity-75">
+                    The principles that guide every automation solution we deliver.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="mb-3">
+                        <i class="fas fa-lightbulb fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Innovation First</h5>
+                    <p class="opacity-75 small">
+                        We embrace cutting-edge technologies and methodologies to deliver solutions that push the boundaries of what's possible in business automation.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="mb-3">
+                        <i class="fas fa-users fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Client-Centric</h5>
+                    <p class="opacity-75 small">
+                        Every solution is tailored to your unique needs, ensuring maximum impact and seamless integration with your existing operations.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="mb-3">
+                        <i class="fas fa-shield-alt fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Security & Reliability</h5>
+                    <p class="opacity-75 small">
+                        Enterprise-grade security and 99.9% uptime guarantee ensure your automated processes operate safely and consistently.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="mb-3">
+                        <i class="fas fa-chart-line fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Measurable Results</h5>
+                    <p class="opacity-75 small">
+                        Data-driven approach with clear KPIs and ROI tracking to demonstrate the tangible value of every automation implementation.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="mb-3">
+                        <i class="fas fa-handshake fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Partnership</h5>
+                    <p class="opacity-75 small">
+                        We don't just deliver solutions—we build long-term partnerships that evolve with your business needs and growth.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="mb-3">
+                        <i class="fas fa-graduation-cap fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Knowledge Transfer</h5>
+                    <p class="opacity-75 small">
+                        Comprehensive training and support to ensure your team can maintain, optimize, and expand automation capabilities independently.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Expertise Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="glass-card p-4 animate-on-scroll">
+                    <h3 class="text-gradient mb-4">Why Choose FloPro?</h3>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-check-circle text-gradient me-3 mt-1"></i>
+                                <div>
+                                    <h6 class="mb-1">Local Expertise, Global Standards</h6>
+                                    <small class="opacity-75">Deep understanding of Caribbean business culture with world-class technology implementations.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-check-circle text-gradient me-3 mt-1"></i>
+                                <div>
+                                    <h6 class="mb-1">End-to-End Solutions</h6>
+                                    <small class="opacity-75">From initial consultation to ongoing optimization, we handle every aspect of your automation journey.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-check-circle text-gradient me-3 mt-1"></i>
+                                <div>
+                                    <h6 class="mb-1">Proven ROI</h6>
+                                    <small class="opacity-75">Average 300% ROI within the first year of automation implementation across all client engagements.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-check-circle text-gradient me-3 mt-1"></i>
+                                <div>
+                                    <h6 class="mb-1">Rapid Deployment</h6>
+                                    <small class="opacity-75">Most automation solutions deployed within 30-90 days with minimal business disruption.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 order-lg-1">
+                <div class="animate-on-scroll">
+                    <h2 class="display-5 text-gradient mb-4">Caribbean Automation Leaders</h2>
+                    <p class="opacity-75 mb-4">
+                        Based in Kingston, Jamaica, FloPro has established itself as the leading automation consultancy in the Caribbean region. Our team combines international experience with deep local market knowledge to deliver solutions that truly work in our unique business environment.
+                    </p>
+                    <p class="opacity-75 mb-4">
+                        We've successfully implemented automation solutions across diverse industries including banking, telecommunications, manufacturing, logistics, and government services, consistently delivering measurable improvements in efficiency, accuracy, and cost reduction.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="glass border-gradient rounded p-3 text-center">
+                                <h5 class="text-gradient mb-1">RPA</h5>
+                                <small class="opacity-75">Robotic Process Automation</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="glass border-gradient rounded p-3 text-center">
+                                <h5 class="text-gradient mb-1">AI/ML</h5>
+                                <small class="opacity-75">Artificial Intelligence</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="glass border-gradient rounded p-3 text-center">
+                                <h5 class="text-gradient mb-1">Analytics</h5>
+                                <small class="opacity-75">Business Intelligence</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="glass border-gradient rounded p-3 text-center">
+                                <h5 class="text-gradient mb-1">Training</h5>
+                                <small class="opacity-75">Skill Development</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="glass-card text-center p-5 animate-on-scroll">
+            <h2 class="display-5 text-gradient mb-4">Ready to Transform Your Business?</h2>
+            <p class="lead opacity-75 mb-4">
+                Discover how FloPro's automation expertise can revolutionize your operations and drive unprecedented growth.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="{% url 'core:contact' %}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-alt me-2"></i>Schedule Consultation
+                </a>
+                <a href="{% url 'core:services' %}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-cogs me-2"></i>View Our Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

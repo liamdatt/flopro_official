@@ -1,0 +1,415 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact Us - FloPro | Get Started Today{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="min-height: 70vh;">
+    <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-8">
+                <div class="animate-on-scroll">
+                    <h1 class="display-3 text-gradient mb-4">Let's Automate Your Future</h1>
+                    <p class="lead opacity-75 mb-4">
+                        Ready to transform your business operations? Get in touch with our automation experts and discover how FloPro can drive your digital transformation.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="#contact-form" class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket me-2"></i>Start Your Journey
+                        </a>
+                        <a href="tel:+18768242268" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone me-2"></i>Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Methods -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="contact-icon mb-3">
+                        <i class="fas fa-map-marker-alt fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Visit Our Office</h5>
+                    {% if company_info %}
+                    <p class="opacity-75 mb-3">{{ company_info.address }}</p>
+                    {% else %}
+                    <p class="opacity-75 mb-3">161 Constant Spring Road<br>Kingston 8, Jamaica</p>
+                    {% endif %}
+                    <p class="small opacity-50">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <a href="https://maps.google.com/?q=161+Constant+Spring+Road+Kingston+8+Jamaica" 
+                       target="_blank" class="btn btn-outline-light btn-sm">
+                        <i class="fas fa-directions me-2"></i>Get Directions
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="contact-icon mb-3">
+                        <i class="fas fa-phone fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Call Us Direct</h5>
+                    {% if company_info %}
+                    <p class="opacity-75 mb-3">{{ company_info.phone }}</p>
+                    {% else %}
+                    <p class="opacity-75 mb-3">+1 (876) 824-2268</p>
+                    {% endif %}
+                    <p class="small opacity-50">Available during business hours</p>
+                    <a href="tel:+18768242268" class="btn btn-outline-light btn-sm">
+                        <i class="fas fa-phone me-2"></i>Call Now
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="contact-icon mb-3">
+                        <i class="fas fa-envelope fa-3x text-gradient"></i>
+                    </div>
+                    <h5 class="text-gradient mb-3">Email Us</h5>
+                    {% if company_info %}
+                    <p class="opacity-75 mb-3">{{ company_info.email }}</p>
+                    {% else %}
+                    <p class="opacity-75 mb-3">autom8@floproja.com</p>
+                    {% endif %}
+                    <p class="small opacity-50">We respond within 24 hours</p>
+                    <a href="mailto:autom8@floproja.com" class="btn btn-outline-light btn-sm">
+                        <i class="fas fa-envelope me-2"></i>Send Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="py-5" id="contact-form">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="glass-card p-4 animate-on-scroll">
+                    <h2 class="text-gradient mb-4">Start Your Automation Journey</h2>
+                    <p class="opacity-75 mb-4">
+                        Tell us about your automation needs and we'll get back to you with a customized solution proposal.
+                    </p>
+                    
+                    <form class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                    <label for="firstName">First Name *</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                    <label for="lastName">Last Name *</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                            <label for="email">Email Address *</label>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="company" placeholder="Company Name">
+                                    <label for="company">Company Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="service">
+                                <option value="">Select service of interest...</option>
+                                <option value="rpa">Robotic Process Automation (RPA)</option>
+                                <option value="analytics">Data Analytics & Business Intelligence</option>
+                                <option value="training">Professional Training & Certification</option>
+                                <option value="accounting">Accounting & Business Filing Automation</option>
+                                <option value="consultation">Strategic Automation Consultation</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                            <label for="service">Service of Interest</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="timeline">
+                                <option value="">When would you like to start?</option>
+                                <option value="immediate">Immediately</option>
+                                <option value="1-3months">Within 1-3 months</option>
+                                <option value="3-6months">Within 3-6 months</option>
+                                <option value="planning">Still planning</option>
+                            </select>
+                            <label for="timeline">Project Timeline</label>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control" id="message" style="height: 120px" 
+                                      placeholder="Tell us about your automation needs..." required></textarea>
+                            <label for="message">Tell us about your automation needs... *</label>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletter">
+                                <label class="form-check-label small opacity-75" for="newsletter">
+                                    Subscribe to automation insights and updates
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Quick Info -->
+            <div class="col-lg-4">
+                <div class="animate-on-scroll">
+                    <!-- Response Time -->
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="text-gradient mb-3">Quick Response Guarantee</h5>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-clock text-gradient me-3"></i>
+                                    <div>
+                                        <small class="fw-bold">Initial Response</small>
+                                        <div class="small opacity-75">Within 4 hours</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-calendar-check text-gradient me-3"></i>
+                                    <div>
+                                        <small class="fw-bold">Consultation Scheduled</small>
+                                        <div class="small opacity-75">Within 24 hours</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-alt text-gradient me-3"></i>
+                                    <div>
+                                        <small class="fw-bold">Proposal Delivery</small>
+                                        <div class="small opacity-75">Within 48 hours</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What to Expect -->
+                    <div class="glass-card p-4 mb-4">
+                        <h5 class="text-gradient mb-3">What to Expect</h5>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker">1</div>
+                                <div class="timeline-content">
+                                    <h6 class="mb-1">Initial Consultation</h6>
+                                    <small class="opacity-75">Free 30-minute discovery call to understand your needs</small>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">2</div>
+                                <div class="timeline-content">
+                                    <h6 class="mb-1">Process Assessment</h6>
+                                    <small class="opacity-75">Detailed analysis of your current operations</small>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">3</div>
+                                <div class="timeline-content">
+                                    <h6 class="mb-1">Custom Proposal</h6>
+                                    <small class="opacity-75">Tailored automation solution with ROI projections</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    {% if social_media %}
+                    <div class="glass-card p-4">
+                        <h5 class="text-gradient mb-3">Follow Our Journey</h5>
+                        <p class="small opacity-75 mb-3">
+                            Stay updated with the latest automation insights and success stories.
+                        </p>
+                        <div class="d-flex gap-2 flex-wrap">
+                            {% for social in social_media %}
+                            <a href="{{ social.url }}" target="_blank" 
+                               class="social-icon"
+                               title="{{ social.get_platform_display }}">
+                                <i class="{{ social.icon_class }}"></i>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center animate-on-scroll">
+                <h2 class="display-4 text-gradient mb-3">Frequently Asked Questions</h2>
+                <p class="lead opacity-75">
+                    Quick answers to common questions about our automation services.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 animate-on-scroll">
+                    <h6 class="text-gradient mb-2">How long does RPA implementation take?</h6>
+                    <p class="small opacity-75 mb-0">
+                        Most RPA projects are completed within 30-90 days, depending on complexity. Simple processes can be automated in just a few weeks.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 animate-on-scroll">
+                    <h6 class="text-gradient mb-2">What's the typical ROI for automation?</h6>
+                    <p class="small opacity-75 mb-0">
+                        Our clients typically see 200-500% ROI within the first year, with cost savings of 40-80% on automated processes.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 animate-on-scroll">
+                    <h6 class="text-gradient mb-2">Do you provide ongoing support?</h6>
+                    <p class="small opacity-75 mb-0">
+                        Yes, we offer comprehensive support packages including monitoring, maintenance, optimization, and training for your team.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 animate-on-scroll">
+                    <h6 class="text-gradient mb-2">Can you work with our existing systems?</h6>
+                    <p class="small opacity-75 mb-0">
+                        Absolutely. Our solutions integrate with virtually any existing software, including legacy systems, web applications, and databases.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<style>
+.contact-icon i {
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.form-floating > .form-control,
+.form-floating > .form-select {
+    background: var(--glass-background) !important;
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-select:focus {
+    border-color: var(--primary-cyan) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 245, 255, 0.25) !important;
+}
+
+.form-floating > label {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select:focus ~ label,
+.form-floating > .form-select:not([value=""]) ~ label {
+    color: var(--primary-cyan) !important;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    bottom: 0;
+    width: 2px;
+    background: var(--gradient-primary);
+}
+
+.timeline-item {
+    display: flex;
+    align-items-flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-marker {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-top: 0.25rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-cyan);
+    border-color: var(--primary-cyan);
+}
+
+.form-check-input:focus {
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 0 0.2rem rgba(0, 245, 255, 0.25);
+}
+</style>
+{% endblock %}

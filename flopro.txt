@@ -1,0 +1,68 @@
+# FloPro (FloPr) — Company Profile
+
+
+## 1) Overview
+
+FloPro is a Jamaica‑based automation company focused on streamlining business workflows. The business positions itself around Robotic Process Automation (RPA), data analytics, and professional training designed to optimize day‑to‑day operations.
+
+## 2) Core Offerings
+
+### 2.1 Robotic Process Automation (RPA)
+
+FloPro offers consulting and implementation to automate routine, rules‑based processes across common business functions (e.g., accounting, client correspondence, report generation). Engagements are initiated via consultation to map processes and identify the right automation stack (examples referenced on site include platforms such as Microsoft Power Automate and UiPath).
+
+### 2.2 Data Analytics
+
+FloPro provides data services oriented toward decision‑support—helping organizations harness their operational and financial data. Services include building analytics assets that foster a data‑driven culture and enable faster, more reliable management reporting.
+
+### 2.3 Education & Training
+
+FloPro runs specialized training aimed at building internal capability in automation technologies. Offerings emphasize practical skills for automating repetitive tasks, streamlining workflows, and improving productivity. (An Education & Training page is presented under the services section.)
+
+### 2.4 Accounting & Business Filing
+
+The site lists "Accounting & Business Filing" among its service categories, indicating support for administrative compliance and finance workflows aligned with automation.
+
+## 3) Illustrative Content from the Blog
+
+FloPro maintains a blog showcasing practical automations and shortcuts. Example entries include:
+
+* "AUTOMATION OF THE DAY: Accounting robot in Power Automate" (March 16, 2024)
+* "CUSTOM SHORTCUT OF THE DAY!" (March 12, 2024)
+* "AUTOMATION OF THE DAY: Automate your legal documents!" (March 8, 2024)
+
+These posts reflect a focus on applied automation in finance and office productivity.
+
+## 4) Team
+
+A team profile page highlights at least one team member:
+
+* **Mark Lewis** — Finance & Technology professional with expertise in financial modeling, web development, and operational efficiency through automation.
+
+## 5) Contact Information (as listed on the site)
+
+* **Office:** 161 Constant Spring Road, Kingston 8, Jamaica
+* **Phone:** +1 (876) 824‑2268
+* **Email:** [autom8@floproja.com](mailto:autom8@floproja.com)
+
+## 6) Brand Voice & Positioning Notes
+
+* Site title/tagline emphasizes business workflow automation ("Automate your workflows" theme).
+* Calls‑to‑action invite visitors to book consultations and explore service lines in RPA, data analytics, and training.
+
+## 7) Social & Web Presence Linked from the Site
+
+The website links to company social channels (e.g., LinkedIn, Instagram, YouTube/Twitter) to showcase updates, short automation tips, and case‑style posts.
+
+## 8) Observations & Inconsistencies Noted On‑Site
+
+* A "Get a Quote" form page appears to include placeholder contact details (non‑Jamaica address and toll‑free number). The primary contact details elsewhere on the site remain Jamaican (address, local phone, and email).
+
+---
+
+### Appendix: Fast Facts
+
+* **Business type:** Automation & analytics services provider
+* **Headquarters:** Kingston 8, Jamaica
+* **Service pillars:** RPA; Data Analytics; Education & Training; Accounting & Business Filing
+* **Primary contact:** [autom8@floproja.com](mailto:autom8@floproja.com) / +1 876 824‑2268
