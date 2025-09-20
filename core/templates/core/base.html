@@ -26,7 +26,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{% url 'core:home' %}">
                 <i class="fas fa-robot me-2"></i>
-                <span>{% if company_info %}{{ company_info.name }}{% else %}FloPro{% endif %}</span>
+                <span>FloPro</span>
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -68,17 +68,28 @@
                 </ul>
 
                 <!-- Social Media Icons -->
-                {% if social_media %}
                 <div class="d-flex align-items-center gap-2">
-                    {% for social in social_media %}
-                    <a href="{{ social.url }}" target="_blank" 
+                    <a href="https://linkedin.com/company/flopro" target="_blank" 
                        class="social-icon"
-                       title="{{ social.get_platform_display }}">
-                        <i class="{{ social.icon_class }}"></i>
+                       title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
                     </a>
-                    {% endfor %}
+                    <a href="https://youtube.com/@flopro" target="_blank" 
+                       class="social-icon"
+                       title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/flopro" target="_blank" 
+                       class="social-icon"
+                       title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/flopro" target="_blank" 
+                       class="social-icon"
+                       title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
-                {% endif %}
             </div>
         </div>
     </nav>
@@ -96,10 +107,10 @@
                     <div class="glass-card h-100">
                         <h5 class="text-gradient mb-3">
                             <i class="fas fa-robot me-2"></i>
-                            {% if company_info %}{{ company_info.name }}{% else %}FloPro{% endif %}
+                            FloPro
                         </h5>
                         <p class="mb-3">
-                            {% if company_info %}{{ company_info.tagline }}{% else %}Automate your workflows{% endif %}
+                            Automate your workflows
                         </p>
                         <p class="small opacity-75">
                             Jamaica's premier automation company, transforming businesses through cutting-edge RPA, data analytics, and professional training solutions.
@@ -132,35 +143,44 @@
                 <div class="col-lg-4">
                     <div class="glass-card h-100">
                         <h6 class="text-gradient mb-3">Contact Info</h6>
-                        {% if company_info %}
                         <div class="contact-info">
                             <div class="d-flex align-items-start mb-2">
                                 <i class="fas fa-map-marker-alt text-gradient me-2 mt-1"></i>
-                                <small class="opacity-75">{{ company_info.address }}</small>
+                                <small class="opacity-75">161 Constant Spring Road, Kingston 8, Jamaica</small>
                             </div>
                             <div class="d-flex align-items-center mb-2">
                                 <i class="fas fa-phone text-gradient me-2"></i>
-                                <small class="opacity-75">{{ company_info.phone }}</small>
+                                <small class="opacity-75">+1 (876) 824-2268</small>
                             </div>
                             <div class="d-flex align-items-center mb-3">
                                 <i class="fas fa-envelope text-gradient me-2"></i>
-                                <small class="opacity-75">{{ company_info.email }}</small>
+                                <small class="opacity-75">autom8@floproja.com</small>
                             </div>
                         </div>
-                        {% endif %}
 
                         <!-- Social Media Icons -->
-                        {% if social_media %}
                         <div class="d-flex gap-2">
-                            {% for social in social_media %}
-                            <a href="{{ social.url }}" target="_blank" 
+                            <a href="https://linkedin.com/company/flopro" target="_blank" 
                                class="social-icon"
-                               title="{{ social.get_platform_display }}">
-                                <i class="{{ social.icon_class }}"></i>
+                               title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
                             </a>
-                            {% endfor %}
+                            <a href="https://youtube.com/@flopro" target="_blank" 
+                               class="social-icon"
+                               title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://twitter.com/flopro" target="_blank" 
+                               class="social-icon"
+                               title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/flopro" target="_blank" 
+                               class="social-icon"
+                               title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
-                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -169,7 +189,7 @@
             
             <div class="text-center">
                 <p class="mb-0 opacity-75">
-                    &copy; 2025 {% if company_info %}{{ company_info.name }}{% else %}FloPro{% endif %}. 
+                    &copy; 2025 FloPro. 
                     All rights reserved. | Powered by cutting-edge automation technology.
                 </p>
             </div>

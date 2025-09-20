@@ -14,11 +14,7 @@
                         <span class="text-gradient">Future</span>
                     </h1>
                     <p class="hero-subtitle mb-4">
-                        {% if company_info and company_info.description %}
-                            {{ company_info.description }}
-                        {% else %}
-                            FloPro delivers cutting-edge automation solutions that transform how Jamaican businesses operate. From RPA to advanced analytics, we're your partners in digital transformation.
-                        {% endif %}
+                        FloPro is a Jamaica-based automation company focused on streamlining business workflows through Robotic Process Automation (RPA), data analytics, and professional training designed to optimize day-to-day operations.
                     </p>
                     <div class="d-flex flex-wrap gap-3 mb-4">
                         <a href="{% url 'core:services' %}" class="btn btn-primary">
@@ -55,17 +51,6 @@
             
             <div class="col-lg-6 mt-5 mt-lg-0">
                 <div class="video-section animate-on-scroll">
-                    {% if company_info and company_info.youtube_video_id %}
-                    <div class="video-container">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/{{ company_info.youtube_video_id }}?rel=0&showinfo=0&modestbranding=1"
-                                    title="FloPro - Business Automation Solutions"
-                                    allowfullscreen
-                                    class="rounded-4">
-                            </iframe>
-                        </div>
-                    </div>
-                    {% else %}
                     <div class="video-placeholder glass-card text-center p-5">
                         <div class="mb-4">
                             <i class="fas fa-play-circle fa-5x text-gradient"></i>
@@ -77,7 +62,6 @@
                             <span class="small opacity-50 ms-2">Video coming soon</span>
                         </div>
                     </div>
-                    {% endif %}
                 </div>
             </div>
         </div>

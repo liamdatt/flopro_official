@@ -37,11 +37,7 @@
                         <i class="fas fa-map-marker-alt fa-3x text-gradient"></i>
                     </div>
                     <h5 class="text-gradient mb-3">Visit Our Office</h5>
-                    {% if company_info %}
-                    <p class="opacity-75 mb-3">{{ company_info.address }}</p>
-                    {% else %}
                     <p class="opacity-75 mb-3">161 Constant Spring Road<br>Kingston 8, Jamaica</p>
-                    {% endif %}
                     <p class="small opacity-50">Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <a href="https://maps.google.com/?q=161+Constant+Spring+Road+Kingston+8+Jamaica" 
                        target="_blank" class="btn btn-outline-light btn-sm">
@@ -56,11 +52,7 @@
                         <i class="fas fa-phone fa-3x text-gradient"></i>
                     </div>
                     <h5 class="text-gradient mb-3">Call Us Direct</h5>
-                    {% if company_info %}
-                    <p class="opacity-75 mb-3">{{ company_info.phone }}</p>
-                    {% else %}
                     <p class="opacity-75 mb-3">+1 (876) 824-2268</p>
-                    {% endif %}
                     <p class="small opacity-50">Available during business hours</p>
                     <a href="tel:+18768242268" class="btn btn-outline-light btn-sm">
                         <i class="fas fa-phone me-2"></i>Call Now
@@ -74,11 +66,7 @@
                         <i class="fas fa-envelope fa-3x text-gradient"></i>
                     </div>
                     <h5 class="text-gradient mb-3">Email Us</h5>
-                    {% if company_info %}
-                    <p class="opacity-75 mb-3">{{ company_info.email }}</p>
-                    {% else %}
                     <p class="opacity-75 mb-3">autom8@floproja.com</p>
-                    {% endif %}
                     <p class="small opacity-50">We respond within 24 hours</p>
                     <a href="mailto:autom8@floproja.com" class="btn btn-outline-light btn-sm">
                         <i class="fas fa-envelope me-2"></i>Send Email
@@ -248,23 +236,34 @@
                     </div>
 
                     <!-- Social Media -->
-                    {% if social_media %}
                     <div class="glass-card p-4">
                         <h5 class="text-gradient mb-3">Follow Our Journey</h5>
                         <p class="small opacity-75 mb-3">
                             Stay updated with the latest automation insights and success stories.
                         </p>
                         <div class="d-flex gap-2 flex-wrap">
-                            {% for social in social_media %}
-                            <a href="{{ social.url }}" target="_blank" 
+                            <a href="https://linkedin.com/company/flopro" target="_blank" 
                                class="social-icon"
-                               title="{{ social.get_platform_display }}">
-                                <i class="{{ social.icon_class }}"></i>
+                               title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
                             </a>
-                            {% endfor %}
+                            <a href="https://youtube.com/@flopro" target="_blank" 
+                               class="social-icon"
+                               title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://twitter.com/flopro" target="_blank" 
+                               class="social-icon"
+                               title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/flopro" target="_blank" 
+                               class="social-icon"
+                               title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
-                    {% endif %}
                 </div>
             </div>
         </div>

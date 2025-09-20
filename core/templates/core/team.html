@@ -22,43 +22,9 @@
 <!-- Team Grid -->
 <section class="py-5">
     <div class="container">
-        {% if team_members %}
+        <!-- Team Members -->
         <div class="row g-4 justify-content-center">
-            {% for member in team_members %}
-            <div class="col-lg-4 col-md-6">
-                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
-                    <div class="team-avatar mb-4">
-                        {% if member.image %}
-                        <img src="{{ member.image.url }}" alt="{{ member.name }}" 
-                             class="rounded-circle" 
-                             style="width: 120px; height: 120px; object-fit: cover; border: 3px solid var(--primary-cyan);">
-                        {% else %}
-                        <div class="avatar-placeholder d-inline-flex align-items-center justify-content-center rounded-circle"
-                             style="width: 120px; height: 120px; background: var(--gradient-card); border: 3px solid var(--primary-cyan);">
-                            <i class="fas fa-user fa-3x text-gradient"></i>
-                        </div>
-                        {% endif %}
-                    </div>
-                    
-                    <h4 class="text-gradient mb-2">{{ member.name }}</h4>
-                    <h6 class="text-muted mb-3">{{ member.title }}</h6>
-                    <p class="opacity-75 small mb-4">{{ member.bio }}</p>
-                    
-                    <div class="team-actions">
-                        {% if member.linkedin_url %}
-                        <a href="{{ member.linkedin_url }}" target="_blank" 
-                           class="btn btn-outline-light btn-sm">
-                            <i class="fab fa-linkedin me-2"></i>Connect
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% else %}
-        <!-- Default Team Member -->
-        <div class="row g-4 justify-content-center">
+            <!-- Liam Datt -->
             <div class="col-lg-4 col-md-6">
                 <div class="glass-card text-center p-4 h-100 animate-on-scroll">
                     <div class="team-avatar mb-4">
@@ -68,21 +34,46 @@
                         </div>
                     </div>
                     
-                    <h4 class="text-gradient mb-2">Mark Lewis</h4>
-                    <h6 class="text-muted mb-3">Finance & Technology Professional</h6>
+                    <h4 class="text-gradient mb-2">Liam Datt</h4>
+                    <h6 class="text-muted mb-3">Technology & Business Intelligence Specialist</h6>
                     <p class="opacity-75 small mb-4">
-                        Mark brings extensive expertise in financial modeling, web development, and operational efficiency through automation. With a passion for leveraging technology to streamline business processes, Mark leads FloPro's initiatives in RPA and data analytics.
+                        Liam is a seasoned technology professional with deep expertise in business intelligence, data analytics, and process automation. With a passion for transforming complex business challenges into elegant automated solutions, Liam drives FloPro's technical innovation and client success initiatives.
                     </p>
                     
                     <div class="team-actions">
-                        <button class="btn btn-outline-light btn-sm" disabled>
+                        <a href="https://linkedin.com/in/liam-datt-flopro" target="_blank" 
+                           class="btn btn-outline-light btn-sm">
                             <i class="fab fa-linkedin me-2"></i>Connect
-                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- William C. Ashley -->
+            <div class="col-lg-4 col-md-6">
+                <div class="glass-card text-center p-4 h-100 animate-on-scroll">
+                    <div class="team-avatar mb-4">
+                        <div class="avatar-placeholder d-inline-flex align-items-center justify-content-center rounded-circle"
+                             style="width: 120px; height: 120px; background: var(--gradient-card); border: 3px solid var(--primary-cyan);">
+                            <i class="fas fa-user fa-3x text-gradient"></i>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-gradient mb-2">William C. Ashley</h4>
+                    <h6 class="text-muted mb-3">Strategic Automation Consultant</h6>
+                    <p class="opacity-75 small mb-4">
+                        William brings extensive experience in strategic consulting and operational excellence to FloPro's automation practice. With a proven track record in process optimization and change management, William ensures that automation implementations deliver sustainable business value and organizational transformation.
+                    </p>
+                    
+                    <div class="team-actions">
+                        <a href="https://linkedin.com/in/william-c-ashley-flopro" target="_blank" 
+                           class="btn btn-outline-light btn-sm">
+                            <i class="fab fa-linkedin me-2"></i>Connect
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        {% endif %}
     </div>
 </section>
 

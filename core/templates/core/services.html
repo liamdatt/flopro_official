@@ -22,38 +22,7 @@
 <!-- Services Grid -->
 <section class="py-5">
     <div class="container">
-        {% if services %}
-        <div class="row g-4">
-            {% for service in services %}
-            <div class="col-lg-6">
-                <div class="glass-card p-4 h-100 animate-on-scroll">
-                    <div class="d-flex align-items-start">
-                        <div class="service-icon me-4">
-                            {% if service.icon_class %}
-                            <i class="{{ service.icon_class }} fa-3x text-gradient"></i>
-                            {% else %}
-                            <i class="fas fa-cogs fa-3x text-gradient"></i>
-                            {% endif %}
-                        </div>
-                        <div class="flex-grow-1">
-                            <div class="d-flex align-items-center mb-3">
-                                <h4 class="text-gradient mb-0 me-3">{{ service.title }}</h4>
-                                {% if service.is_featured %}
-                                <span class="badge bg-gradient-primary">Featured</span>
-                                {% endif %}
-                            </div>
-                            <p class="opacity-75 mb-3">{{ service.description }}</p>
-                            <a href="{% url 'core:contact' %}" class="btn btn-outline-light btn-sm">
-                                <i class="fas fa-arrow-right me-2"></i>Learn More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% else %}
-        <!-- Default Services Grid -->
+        <!-- Services Grid -->
         <div class="row g-4">
             <!-- RPA Service -->
             <div class="col-lg-6">
@@ -183,7 +152,6 @@
                 </div>
             </div>
         </div>
-        {% endif %}
     </div>
 </section>
 
