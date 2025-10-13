@@ -121,10 +121,13 @@ USE_TZ = True
 # ---- Static / Media ----
 STATIC_URL = '/static/'
 STATIC_ROOT = str(BASE_DIR / 'staticfiles')
+STATICFILES_DIRS = [
+    BASE_DIR / 'core' / 'static',
+]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
-# If you need uploads, we’ll mount a volume and point this at /app/media
+# If you need uploads, we'll mount a volume and point this at /app/media
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

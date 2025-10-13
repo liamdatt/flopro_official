@@ -1,4 +1,5 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block title %}Our Team - FloPro | Automation Experts{% endblock %}
 
@@ -24,24 +25,24 @@
     <div class="container">
         <!-- Team Members -->
         <div class="row g-4 justify-content-center">
-            <!-- Liam Datt -->
+            <!-- William C. Ashley -->
             <div class="col-lg-4 col-md-6">
                 <div class="glass-card text-center p-4 h-100 animate-on-scroll">
                     <div class="team-avatar mb-4">
-                        <div class="avatar-placeholder d-inline-flex align-items-center justify-content-center rounded-circle"
-                             style="width: 120px; height: 120px; background: var(--gradient-card); border: 3px solid var(--primary-cyan);">
-                            <i class="fas fa-user fa-3x text-gradient"></i>
-                        </div>
+                        <img src="{% static 'core/images/William Ashley.jpg' %}" 
+                             alt="William C. Ashley"
+                             class="rounded-circle"
+                             style="width: 150px; height: 150px; object-fit: cover; border: 4px solid var(--primary-orange); box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);">
                     </div>
                     
-                    <h4 class="text-gradient mb-2">Liam Datt</h4>
-                    <h6 class="text-muted mb-3">Technology & Business Intelligence Specialist</h6>
+                    <h4 class="text-gradient mb-2">William C. Ashley</h4>
+                    <h6 class="text-muted mb-3">Founder</h6>
                     <p class="opacity-75 small mb-4">
-                        Liam is a seasoned technology professional with deep expertise in business intelligence, data analytics, and process automation. With a passion for transforming complex business challenges into elegant automated solutions, Liam drives FloPro's technical innovation and client success initiatives.
+                        William brings extensive experience in strategic consulting and operational excellence to FloPro's automation practice. With a proven track record in process optimization and change management, William ensures that automation implementations deliver sustainable business value and organizational transformation.
                     </p>
                     
                     <div class="team-actions">
-                        <a href="https://linkedin.com/in/liam-datt-flopro" target="_blank" 
+                        <a href="https://www.linkedin.com/in/w-chase-ashley-b0a043127/" target="_blank" 
                            class="btn btn-outline-light btn-sm">
                             <i class="fab fa-linkedin me-2"></i>Connect
                         </a>
@@ -49,24 +50,24 @@
                 </div>
             </div>
 
-            <!-- William C. Ashley -->
+            <!-- Liam Datt -->
             <div class="col-lg-4 col-md-6">
                 <div class="glass-card text-center p-4 h-100 animate-on-scroll">
                     <div class="team-avatar mb-4">
-                        <div class="avatar-placeholder d-inline-flex align-items-center justify-content-center rounded-circle"
-                             style="width: 120px; height: 120px; background: var(--gradient-card); border: 3px solid var(--primary-cyan);">
-                            <i class="fas fa-user fa-3x text-gradient"></i>
-                        </div>
+                        <img src="{% static 'core/images/Liam Datt.png' %}" 
+                             alt="Liam Datt"
+                             class="rounded-circle"
+                             style="width: 150px; height: 150px; object-fit: cover; border: 4px solid var(--primary-orange); box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);">
                     </div>
                     
-                    <h4 class="text-gradient mb-2">William C. Ashley</h4>
-                    <h6 class="text-muted mb-3">Strategic Automation Consultant</h6>
+                    <h4 class="text-gradient mb-2">Liam Datt</h4>
+                    <h6 class="text-muted mb-3">Founder</h6>
                     <p class="opacity-75 small mb-4">
-                        William brings extensive experience in strategic consulting and operational excellence to FloPro's automation practice. With a proven track record in process optimization and change management, William ensures that automation implementations deliver sustainable business value and organizational transformation.
+                        Liam is a seasoned technology professional with deep expertise in business intelligence, data analytics, and process automation. With a passion for transforming complex business challenges into elegant automated solutions, Liam drives FloPro's technical innovation and client success initiatives.
                     </p>
                     
                     <div class="team-actions">
-                        <a href="https://linkedin.com/in/william-c-ashley-flopro" target="_blank" 
+                        <a href="https://www.linkedin.com/in/liamdatt/" target="_blank" 
                            class="btn btn-outline-light btn-sm">
                             <i class="fab fa-linkedin me-2"></i>Connect
                         </a>
@@ -329,13 +330,30 @@
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 140px;
-    height: 140px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
-    background: var(--gradient-primary);
+    background: var(--gradient-orange);
     opacity: 0.3;
     z-index: -1;
     animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.2;
+    }
+}
+
+.team-avatar img:hover {
+    transform: scale(1.05) rotate(2deg);
+    border-color: var(--secondary-orange);
+    box-shadow: 0 15px 40px rgba(255, 140, 0, 0.6);
 }
 
 .achievement-card {
@@ -346,6 +364,8 @@
 
 .achievement-card:hover {
     transform: translateY(-5px);
+    border-color: var(--primary-orange);
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
 }
 
 .certification-badges .badge {
@@ -361,11 +381,12 @@
 
 .join-team-visual i {
     animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 5px 20px rgba(255, 140, 0, 0.5));
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-15px); }
 }
 </style>
 {% endblock %}

@@ -25,8 +25,25 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{% url 'core:home' %}">
-                <i class="fas fa-robot me-2"></i>
-                <span>FloPro</span>
+                <span class="brand-flo">Flo</span><span class="brand-pr">Pr</span><span class="gear-logo">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <linearGradient id="gearGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FF6B00;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#FF8C00;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Perfectly circular gear adapted from reference -->
+                        <path fill="url(#gearGradient)" d="M494.701,212.481l-28.245-5.44c-26.524-5.091-38.686-36.072-22.715-57.848l17.728-24.17c6.228-8.491,5.329-20.256-2.117-27.702l-38.293-38.293c-7.233-7.233-18.581-8.314-27.05-2.577l-23.808,16.128c-22.352,15.131-52.859,1.819-56.978-24.867L308.682,18.1C307.085,7.688,298.128,0,287.595,0h-54.165c-10.232,0-19.022,7.264-20.951,17.312l-6.997,36.459c-4.995,25.931-34.876,38.311-56.751,23.498l-30.74-20.82c-8.468-5.736-19.816-4.654-27.048,2.578L52.648,97.32c-7.446,7.446-8.345,19.211-2.117,27.702l17.728,24.171c15.971,21.776,3.809,52.756-22.702,57.845l-28.258,5.442C7.257,214.415,0,223.203,0,233.429v54.144c0,10.528,7.68,19.482,18.085,21.085l29.632,4.565c26.699,4.105,40.01,34.618,24.862,56.976L56.45,394.009c-5.737,8.468-4.655,19.817,2.577,27.05l38.293,38.293c7.446,7.446,19.211,8.345,27.702,2.117l24.171-17.728c21.776-15.971,52.764-3.809,57.869,22.712l5.416,28.233C214.406,504.735,223.197,512,233.429,512h54.165c10.532,0,19.488-7.686,21.086-18.096l3.2-20.843c4.199-27.285,35.833-40.394,58.097-24.07l16.993,12.473c8.491,6.233,20.26,5.335,27.708-2.113l38.293-38.293c7.233-7.233,8.314-18.581,2.577-27.05l-16.128-23.808c-15.149-22.359-1.838-52.872,24.855-56.976l29.638-4.566C504.32,307.055,512,298.101,512,287.573v-54.144C512,223.203,504.743,214.415,494.701,212.481z">
+                            <animateTransform attributeName="transform" type="rotate" from="0 256 256" to="360 256 256" dur="8s" repeatCount="indefinite"/>
+                        </path>
+                        <!-- Inner circle -->
+                        <circle cx="256" cy="256" r="107" fill="#0A0A0F">
+                            <animateTransform attributeName="transform" type="rotate" from="0 256 256" to="360 256 256" dur="8s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </span>
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -69,22 +86,22 @@
 
                 <!-- Social Media Icons -->
                 <div class="d-flex align-items-center gap-2">
-                    <a href="https://linkedin.com/company/flopro" target="_blank" 
+                    <a href="https://www.linkedin.com/company/flopro-jamaica/posts/?feedView=all" target="_blank" 
                        class="social-icon"
                        title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://youtube.com/@flopro" target="_blank" 
+                    <a href="https://www.youtube.com/@FloProJA" target="_blank" 
                        class="social-icon"
                        title="YouTube">
                         <i class="fab fa-youtube"></i>
                     </a>
-                    <a href="https://twitter.com/flopro" target="_blank" 
+                    <a href="https://x.com/FloPro_JA" target="_blank" 
                        class="social-icon"
                        title="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://instagram.com/flopro" target="_blank" 
+                    <a href="https://www.instagram.com/flopro_ja/" target="_blank" 
                        class="social-icon"
                        title="Instagram">
                         <i class="fab fa-instagram"></i>
@@ -105,9 +122,25 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="glass-card h-100">
-                        <h5 class="text-gradient mb-3">
-                            <i class="fas fa-robot me-2"></i>
-                            FloPro
+                        <h5 class="text-gradient mb-3 d-flex align-items-center">
+                            <span>FloPr</span>
+                            <span class="gear-logo" style="font-size: 1.2em;">
+                                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                                    <defs>
+                                        <linearGradient id="gearGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#FF6B00;stop-opacity:1" />
+                                            <stop offset="50%" style="stop-color:#FF8C00;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#gearGradient2)" d="M494.701,212.481l-28.245-5.44c-26.524-5.091-38.686-36.072-22.715-57.848l17.728-24.17c6.228-8.491,5.329-20.256-2.117-27.702l-38.293-38.293c-7.233-7.233-18.581-8.314-27.05-2.577l-23.808,16.128c-22.352,15.131-52.859,1.819-56.978-24.867L308.682,18.1C307.085,7.688,298.128,0,287.595,0h-54.165c-10.232,0-19.022,7.264-20.951,17.312l-6.997,36.459c-4.995,25.931-34.876,38.311-56.751,23.498l-30.74-20.82c-8.468-5.736-19.816-4.654-27.048,2.578L52.648,97.32c-7.446,7.446-8.345,19.211-2.117,27.702l17.728,24.171c15.971,21.776,3.809,52.756-22.702,57.845l-28.258,5.442C7.257,214.415,0,223.203,0,233.429v54.144c0,10.528,7.68,19.482,18.085,21.085l29.632,4.565c26.699,4.105,40.01,34.618,24.862,56.976L56.45,394.009c-5.737,8.468-4.655,19.817,2.577,27.05l38.293,38.293c7.446,7.446,19.211,8.345,27.702,2.117l24.171-17.728c21.776-15.971,52.764-3.809,57.869,22.712l5.416,28.233C214.406,504.735,223.197,512,233.429,512h54.165c10.532,0,19.488-7.686,21.086-18.096l3.2-20.843c4.199-27.285,35.833-40.394,58.097-24.07l16.993,12.473c8.491,6.233,20.26,5.335,27.708-2.113l38.293-38.293c7.233-7.233,8.314-18.581,2.577-27.05l-16.128-23.808c-15.149-22.359-1.838-52.872,24.855-56.976l29.638-4.566C504.32,307.055,512,298.101,512,287.573v-54.144C512,223.203,504.743,214.415,494.701,212.481z">
+                                        <animateTransform attributeName="transform" type="rotate" from="0 256 256" to="360 256 256" dur="8s" repeatCount="indefinite"/>
+                                    </path>
+                                    <circle cx="256" cy="256" r="107" fill="#0A0A0F">
+                                        <animateTransform attributeName="transform" type="rotate" from="0 256 256" to="360 256 256" dur="8s" repeatCount="indefinite"/>
+                                    </circle>
+                                </svg>
+                            </span>
                         </h5>
                         <p class="mb-3">
                             Automate your workflows
