@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.conf import settings
+from .models import Contact, CompanyInfo
 
 def home(request):
     """Home page view"""
@@ -18,4 +22,75 @@ def team(request):
 
 def contact(request):
     """Contact Us page view"""
+    if request.method == 'POST':
+        # Get form data
+        first_name = request.POST.get('firstName', '').strip()
+        last_name = request.POST.get('lastName', '').strip()
+        email = request.POST.get('email', '').strip()
+        company = request.POST.get('company', '').strip()
+        phone = request.POST.get('phone', '').strip()
+        service = request.POST.get('service', '').strip()
+        timeline = request.POST.get('timeline', '').strip()
+        message = request.POST.get('message', '').strip()
+        newsletter = request.POST.get('newsletter') == 'on'
+
+        # Basic validation for required fields
+        if not all([first_name, last_name, email, message]):
+            messages.error(request, 'Please fill in all required fields.')
+            return redirect('core:contact')
+
+        # Save to database
+        contact_submission = Contact.objects.create(
+            first_name=first_name,
+            last_name=last_name,
+            email=email,
+            company=company if company else None,
+            phone=phone if phone else None,
+            service=service if service else None,
+            timeline=timeline if timeline else None,
+            message=message,
+            newsletter=newsletter
+        )
+
+        # Get company email from CompanyInfo model
+        try:
+            company_info = CompanyInfo.objects.first()
+            business_email = 'flowproja@gmail.com'
+        except:
+            business_email = 'flowproja@gmail.com'
+
+        # Prepare email content
+        subject = "FloPro Website New Lead"
+        email_message = f"""
+New contact form submission from FloPro website:
+
+Name: {first_name} {last_name}
+Email: {email}
+Company: {company or 'Not provided'}
+Phone: {phone or 'Not provided'}
+Service of Interest: {dict(Contact.SERVICE_CHOICES).get(service, 'Not specified')}
+Project Timeline: {dict(Contact.TIMELINE_CHOICES).get(timeline, 'Not specified')}
+Newsletter Subscription: {'Yes' if newsletter else 'No'}
+
+Message:
+{message}
+
+Submitted at: {contact_submission.submitted_at}
+"""
+
+        try:
+            # Send email
+            send_mail(
+                subject=subject,
+                message=email_message,
+                from_email=settings.EMAIL_HOST_USER,  # Your personal Gmail
+                recipient_list=[business_email],  # Your business email
+                fail_silently=False,
+            )
+            messages.success(request, 'Thank you for your message! We\'ll get back to you within 24 hours.')
+        except Exception as e:
+            messages.error(request, 'There was an error sending your message. Please try again or contact us directly.')
+
+        return redirect('core:contact')
+
     return render(request, 'core/contact.html')

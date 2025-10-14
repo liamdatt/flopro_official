@@ -74,3 +74,40 @@ class CompanyInfo(models.Model):
     class Meta:
         verbose_name = "Company Information"
         verbose_name_plural = "Company Information"
+
+
+class Contact(models.Model):
+    """Model for contact form submissions"""
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    company = models.CharField(max_length=200, blank=True, null=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+
+    SERVICE_CHOICES = [
+        ('rpa', 'Robotic Process Automation (RPA)'),
+        ('analytics', 'Data Analytics & Business Intelligence'),
+        ('training', 'Professional Training & Certification'),
+        ('accounting', 'Accounting & Business Filing Automation'),
+        ('consultation', 'Strategic Automation Consultation'),
+        ('other', 'Other Services'),
+    ]
+    service = models.CharField(max_length=20, choices=SERVICE_CHOICES, blank=True, null=True)
+
+    TIMELINE_CHOICES = [
+        ('immediate', 'Immediately'),
+        ('1-3months', 'Within 1-3 months'),
+        ('3-6months', 'Within 3-6 months'),
+        ('planning', 'Still planning'),
+    ]
+    timeline = models.CharField(max_length=20, choices=TIMELINE_CHOICES, blank=True, null=True)
+
+    message = models.TextField()
+    newsletter = models.BooleanField(default=False)
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} - {self.email}"
+
+    class Meta:
+        ordering = ['-submitted_at']

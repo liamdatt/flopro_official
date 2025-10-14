@@ -20,7 +20,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'False').lower() == 'true'
 ALLOWED_HOSTS = (
     os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',')
     if os.environ.get('DJANGO_ALLOWED_HOSTS')
-    else ['localhost', '127.0.0.1', '0.0.0.0']
+    else ['localhost', '127.0.0.1', '0.0.0.0', 'testserver']
 )
 
 # Needed for POST forms/cookies when served behind Cloudflare
@@ -132,5 +132,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+# ---- Email Configuration ----
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.environ.get('EMAIL_SMTP_HOST')
+EMAIL_PORT = int(os.environ.get('EMAIL_SMTP_PORT', 587))
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_SMTP_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_SMTP_PASS')
+DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_SMTP_USER')
 

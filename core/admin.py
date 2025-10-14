@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SocialMedia, TeamMember, Service, CompanyInfo
+from .models import SocialMedia, TeamMember, Service, CompanyInfo, Contact
 
 @admin.register(SocialMedia)
 class SocialMediaAdmin(admin.ModelAdmin):
@@ -21,3 +21,11 @@ class ServiceAdmin(admin.ModelAdmin):
 @admin.register(CompanyInfo)
 class CompanyInfoAdmin(admin.ModelAdmin):
     list_display = ['name', 'tagline']
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ['first_name', 'last_name', 'email', 'service', 'timeline', 'submitted_at']
+    list_filter = ['service', 'timeline', 'newsletter', 'submitted_at']
+    search_fields = ['first_name', 'last_name', 'email', 'company']
+    readonly_fields = ['submitted_at']
+    ordering = ['-submitted_at']
