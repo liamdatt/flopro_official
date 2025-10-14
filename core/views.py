@@ -1,8 +1,14 @@
-from django.shortcuts import render, redirect
-from django.core.mail import send_mail
-from django.contrib import messages
+import logging
+
 from django.conf import settings
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+
 from .models import Contact, CompanyInfo
+
+
+logger = logging.getLogger(__name__)
 
 def home(request):
     """Home page view"""
@@ -78,18 +84,35 @@ Message:
 Submitted at: {contact_submission.submitted_at}
 """
 
-        try:
-            # Send email
-            send_mail(
-                subject=subject,
-                message=email_message,
-                from_email=settings.EMAIL_HOST_USER,  # Your personal Gmail
-                recipient_list=[business_email],  # Your business email
-                fail_silently=False,
+        email_config = {
+            'EMAIL_HOST': getattr(settings, 'EMAIL_HOST', None),
+            'EMAIL_HOST_USER': getattr(settings, 'EMAIL_HOST_USER', None),
+            'EMAIL_HOST_PASSWORD': getattr(settings, 'EMAIL_HOST_PASSWORD', None),
+        }
+
+        missing_config = [key for key, value in email_config.items() if not value]
+        if missing_config:
+            logger.error('Cannot send contact email; missing settings: %s', ', '.join(missing_config))
+            messages.error(
+                request,
+                'Email configuration is incomplete. Please contact support directly while we resolve the issue.'
             )
-            messages.success(request, 'Thank you for your message! We\'ll get back to you within 24 hours.')
-        except Exception as e:
-            messages.error(request, 'There was an error sending your message. Please try again or contact us directly.')
+        else:
+            try:
+                # Send email
+                send_mail(
+                    subject=subject,
+                    message=email_message,
+                    from_email=settings.EMAIL_HOST_USER,  # Your personal Gmail
+                    recipient_list=[business_email],  # Your business email
+                    fail_silently=False,
+                )
+                messages.success(request, 'Thank you for your message! We\'ll get back to you within 24 hours.')
+            except Exception:
+                logger.exception('Failed to send contact email')
+                if getattr(settings, 'DEBUG', False):
+                    raise
+                messages.error(request, 'There was an error sending your message. Please try again or contact us directly.')
 
         return redirect('core:contact')
 
