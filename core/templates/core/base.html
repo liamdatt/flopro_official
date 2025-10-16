@@ -7,7 +7,11 @@
     <title>{% block title %}FloPro - Automate Your Workflows{% endblock %}</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{% static 'core/images/favicon.ico' %}">
+    <!-- `sizes="any"` is to fix Chrome bug -->
+    <link rel="icon" href="{% static 'core/images/favicon.ico' %}" sizes="any" />
+    <link rel="icon" href="{% static 'core/images/icon.svg' %}" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="{% static 'core/images/apple-touch-icon.png' %}" />
+    <link rel="manifest" href="{% static 'core/images/manifest.webmanifest' %}" />
 
     <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
