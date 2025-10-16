@@ -117,3 +117,11 @@ Submitted at: {contact_submission.submitted_at}
         return redirect('core:contact')
 
     return render(request, 'core/contact.html')
+
+def eula(request):
+    """End User License Agreement page view"""
+    return render(request, 'core/eula.html')
+
+def privacy(request):
+    """Privacy Policy page view"""
+    return render(request, 'core/privacy.html')

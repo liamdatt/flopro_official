@@ -1,0 +1,39 @@
+ — End User License Agreement (EULA)
+Effective date: October 10, 2025
+
+1. Parties and Scope
+This End User License Agreement ("Agreement") is between , a company ("Provider", "we", "us"), and the person or entity that installs or connects to the Application ("Customer", "you"). This Agreement governs your use of (the “Application”), which integrates with Intuit QuickBooks Online via Intuit’s APIs.
+2. License Grant
+Subject to this Agreement and timely payment of fees (if any), Provider grants you a non‑exclusive, non‑transferable, revocable license to access and use the Application for your internal business purposes.
+3. Your Responsibilities
+You will: (a) maintain accurate account information; (b) keep your credentials secure; (c) use the Application in accordance with applicable laws and Intuit’s developer/platform terms; (d) not misuse the Application (no reverse engineering, scraping, or unlawful processing of data).
+4. Third‑Party Services (Intuit / n8n / Hosting)
+The Application connects to third‑party services (e.g., QuickBooks Online, n8n, hosting providers). Those services are governed by their own terms and privacy policies. We are not responsible for third‑party services and disclaim all liability arising from their acts or omissions.
+5. Data Processing
+We process Customer Data (including QuickBooks company data) solely to provide the Application and related support, to ensure security, and to meet legal obligations. We don’t sell Customer Data. Our Privacy Policy describes categories, purposes, retention, sharing, security measures, and your choices.
+6. Availability & Support
+We’ll use commercially reasonable efforts to make the Application available and provide support via autom8@floproja.com during 8am - 5 pm, Monday to Friday. Planned maintenance may cause brief interruptions.
+7. Fees & Taxes
+If the Application is fee‑based, fees are set out in the Order or pricing page. Fees are non‑refundable unless stated otherwise. You’re responsible for applicable taxes, excluding our income taxes.
+8. Term; Suspension; Termination
+This Agreement starts when you first use the Application and continues until terminated. Either party may terminate for convenience with written notice (email suffices), or immediately for material breach. We may suspend use for security risks, suspected misuse, or non‑payment.
+9. Effect of Termination / Disconnect
+Upon termination or when you disconnect the Application from QuickBooks, your license ends. We will cease processing Customer Data and delete or de‑identify it from active systems within 3 days unless we’re legally required to retain it. You remain responsible for exporting your data before termination.
+10. Intellectual Property
+We and our licensors retain all rights, title, and interest in and to the Application. No rights are granted except as expressly stated.
+11. Warranties & Disclaimers
+THE APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE". TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON‑INFRINGEMENT.
+
+12. Limitation of Liability
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, NEITHER PARTY WILL BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES; AND OUR AGGREGATE LIABILITY UNDER THIS AGREEMENT WILL NOT EXCEED THE AMOUNTS PAID BY YOU FOR THE APPLICATION IN THE 12 MONTHS BEFORE THE EVENT GIVING RISE TO LIABILITY.
+13. Indemnification
+You will indemnify and hold us harmless from claims arising out of your unlawful use of the Application or violation of this Agreement. We’ll indemnify you for third‑party claims alleging that the unmodified Application infringes their IP, subject to customary exclusions and caps.
+14. Compliance & Data Protection
+You represent that you have a lawful basis to process personal data in the Application. You agree to comply with applicable privacy laws and to honor data‑subject rights requests sent to .
+15. Governing Law; Venue
+This Agreement shall be governed by and construed in accordance with the laws of Jamaica, without regard to its conflict of law principles. The parties agree that the courts located in Kingston, Jamaica shall have exclusive jurisdiction over any dispute arising out of or relating to this Agreement.
+16. Changes
+We may update this Agreement from time to time. We’ll post the revised version with an updated “Effective date.” Your continued use after the effective date constitutes acceptance.
+17. Contact
+Questions?, autom8@floproja.com.
+

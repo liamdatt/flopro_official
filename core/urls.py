@@ -11,4 +11,6 @@ urlpatterns = [
     path('services/', views.services, name='services'),
     path('team/', views.team, name='team'),
     path('contact/', views.contact, name='contact'),
+    path('QBO/EULA/', views.eula, name='eula'),
+    path('QBO/Privacy/', views.privacy, name='privacy'),
 ]

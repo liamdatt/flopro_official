@@ -1,0 +1,41 @@
+Privacy Policy
+Effective date: October 10, 2025
+1. Who we are
+FloPro LIMITED operates an Accounting Automation service , which integrates with QuickBooks Online via OAuth 2.0 to automate accounting workflows (e.g., reading transactions, creating invoices/bills).
+2. Personal data we collect
+Account & Contact: name, business email, phone, company name.
+
+
+Intuit connection data: QuickBooks company ID (realmId), OAuth tokens and metadata necessary to maintain your connection.
+
+
+Accounting data processed from QuickBooks: depending on your configuration, e.g., customers, vendors, items, invoices, bills, journal entries, and related amounts, dates, and identifiers.
+
+
+
+3. Purposes of processing & legal bases
+We process data to: (a) provide, secure, and improve the Application; (b) fulfill requests you initiate in workflows; (c) provide support; (d) comply with law. Our legal bases include performance of a contract, legitimate interests (running our service safely), and compliance with legal obligations. Where required, we rely on consent.
+4. How we share data
+We do not sell personal data. We share data with:
+Service providers / processors: e.g., hosting, monitoring, error tracking, n8n runtime, email. We require contractual safeguards and limit use to our instructions.
+
+
+Intuit / QuickBooks: to the extent necessary to connect your QuickBooks company per your authorization.
+
+
+Legal / safety: if required by law or to protect rights, safety, or the integrity of the service.
+
+
+5. Retention
+We keep data for as long as needed to provide the Application and for legitimate business or legal purposes. By default we delete or de‑identify data from active systems within 3 days after you disconnect or terminate, with backups aging out within 7 days (unless we must retain longer by law).
+6. Security
+We use administrative, technical, and physical safeguards (encryption in transit, restricted access, token rotation, least‑privilege, and monitoring). 
+7. Disconnecting the QuickBooks integration
+You can disconnect the Application from within QuickBooks (“My integrations” → the app → Disconnect). Once disconnected, we stop receiving new data and begin our deletion process per Section 6.
+8. Changes to this policy
+We may update this policy periodically. We’ll post the revised version with an updated “Effective date.”
+9. Contact us
+autom8@floproja.com
+
+
+
