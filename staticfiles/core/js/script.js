@@ -137,26 +137,20 @@ class AnimationController {
     // Form Animations
     setupFormAnimations() {
         const forms = document.querySelectorAll('form');
-        forms.forEach(form => {
+        console.log('Found forms:', forms.length);
+        forms.forEach((form, index) => {
+            console.log(`Form ${index}:`, form.action, form.method);
             form.addEventListener('submit', function(e) {
-                e.preventDefault();
+                console.log('Form submit event triggered!', form.action);
+                // Allow native form submission; only enhance button UI
                 
                 const submitBtn = form.querySelector('button[type="submit"]');
                 if (submitBtn) {
+                    console.log('Button found, updating UI');
                     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
                     submitBtn.disabled = true;
-                    
-                    setTimeout(() => {
-                        submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Sent!';
-                        submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-                        
-                        setTimeout(() => {
-                            submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-                            submitBtn.disabled = false;
-                            submitBtn.style.background = '';
-                            form.reset();
-                        }, 2000);
-                    }, 1500);
+                } else {
+                    console.log('No submit button found');
                 }
             });
         });

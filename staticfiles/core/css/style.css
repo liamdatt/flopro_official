@@ -932,6 +932,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
   }
   
+  .stat-card {
+    padding: 1rem 0.5rem;
+  }
+  
+  .stat-card small {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
   .navbar-brand {
     font-size: 1.5rem;
   }
