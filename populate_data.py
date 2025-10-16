@@ -58,7 +58,7 @@ def populate_data():
             """,
             'contact_content': """
             <p class="mb-4">
-                Ready to transform your business operations? Contact us today for a free consultation. Our team of automation experts will work with you to identify opportunities and design solutions that deliver real ROI.
+                Ready to transform your business operations? Contact us today for a consultation. Our team of automation experts will work with you to identify opportunities and design solutions that deliver real ROI.
             </p>
             <p class="mb-4">
                 <strong>What to expect:</strong>
